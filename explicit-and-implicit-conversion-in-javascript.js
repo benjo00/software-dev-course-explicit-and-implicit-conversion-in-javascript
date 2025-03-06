@@ -19,14 +19,29 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = Number("5") - 2; //added explicit Number conversion
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = Boolean(false);//removed quotes so that it will be seen as a false statement.
 if (isValid) {
     console.log("This is valid!");
+} else { //added else statement so it can still run
+  console.log("This is not valid!");
 }
 
 let age = "25";
-let totalAge = age + 5;
+let totalAge = Number(age) + 5; // was outputting 52 due to implicit conversion. Add Number conversion to fix output.
 console.log("Total Age: " + totalAge);
+
+//my own examples
+
+//explicit type conversion:
+let numberOfApples = Number("10");//I used the Number conversion to explicitly make this a number despite it being in quotes making it a string
+let numberOfOranges = 20;
+let sumFruit = numberOfApples + numberOfOranges;
+console.log("The fantastical fruit total is " + sumFruit);
+
+//implicit type conversion:
+
+let sum = 30 + "2";
+console.log(sum);//returns 302 because 30 was implicitly converted to a string and added to the string "2".
