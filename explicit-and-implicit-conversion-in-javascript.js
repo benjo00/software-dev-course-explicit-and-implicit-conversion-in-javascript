@@ -45,3 +45,8 @@ console.log("The fantastical fruit total is " + sumFruit);
 
 let sum = 30 + "2";
 console.log(sum);//returns 302 because 30 was implicitly converted to a string and added to the string "2".
+
+//example with edge case:
+
+let example = Boolean(null);//since "null" is in the Boolean it automatically is false because "null" is falsy.
+console.log(example);
